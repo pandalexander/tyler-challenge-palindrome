@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Tyler's Coding Challenge</title>
+  </head>
+  <body>
+    <button onclick="checkPalindrome()">
+      Click to check if something is a Palindrome
+    </button>
+    <script>
+      function checkPalindrome() {
+        // Make input is a string
+        word = String(
+          prompt("Please enter a value. Let's see if it's a Palindrome!")
+        );
+
+        // Stop function if user cancels or puts nothing
+        if (word === "null" || word === "") {
+          alert(
+            "Okay! It's okay if you're not ready to answer. Take your time."
+          );
+          return;
+        }
+
+        // Eliminate all spaces and assign value to a new variable
+        let noSpaceWord = word.replace(/\s/g, "");
+
+        // Reverse the new string and assign it to another new variable
+        let reversedWord = noSpaceWord.split("").reverse().join("");
+
+        // check if the reversed string matches the original no space variable
+        if (noSpaceWord === reversedWord) {
+          // if true, alert: "is palindrome"
+          alert(`"${word}" is a Palindrome. Nice!`);
+        } else {
+          // if false, alert: "isn't palindrome"
+          alert(`"${word}" is NOT a Palindrome. Booooo!`);
+        }
+      }
+    </script>
+  </body>
+</html>

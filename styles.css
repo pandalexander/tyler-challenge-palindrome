@@ -1,0 +1,26 @@
+body {
+  height: 100vh;
+  position: relative;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 50vw;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  height: clamp(15rem, 50vh, 70vh);
+  width: clamp(15rem, 50vw, 70vw);
+  border-radius: 25px;
+  border-style: none;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+button:hover {
+  background-color: aliceblue;
+}
